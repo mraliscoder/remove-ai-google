@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         Remove AI search from google
 // @namespace    http://tampermonkey.net/
-// @version      2025-10-15
+// @version      2025-10-17
+// @updateURL    https://github.com/mraliscoder/remove-ai-google/raw/refs/heads/main/remove-ai-google.user.js
+// @downloadURL  https://github.com/mraliscoder/remove-ai-google/raw/refs/heads/main/remove-ai-google.user.js
 // @description  Remove AI search from Google
 // @author       edwardcode
 // @match        https://www.google.com/search*
