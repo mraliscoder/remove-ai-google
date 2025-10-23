@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove AI search from google
 // @namespace    http://tampermonkey.net/
-// @version      2025-10-24
+// @version      2025-10-24-1
 // @updateURL    https://github.com/mraliscoder/remove-ai-google/raw/refs/heads/main/remove-ai-google.user.js
 // @downloadURL  https://github.com/mraliscoder/remove-ai-google/raw/refs/heads/main/remove-ai-google.user.js
 // @description  Remove AI search from Google
@@ -14,14 +14,14 @@
 
 (function() {
     'use strict';
-
-
     document.addEventListener('DOMContentLoaded', () => {
-    const nodes = document.querySelectorAll('[role="listitem"]');
-    const aiModeNode = Array.from(nodes).find(node => {
-        return node.textContent.includes('AI') || node.textContent.includes('ИИ') || node.textContent.includes('Short videos');
-    });
-
-    aiModeNode.remove();
+        const nodes = document.querySelectorAll('[role="listitem"]');
+        nodes.forEach(node => {
+            if (node.textContent.includes('AI') || 
+                node.textContent.includes('ИИ') || 
+                node.textContent.includes('Short videos')) {
+                node.remove();
+            }
+        });
     });
 })();
